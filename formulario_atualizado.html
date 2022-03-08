@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <script src="Javascript.js"></script>
+    <title>FORMULÁRIO</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Formulário de candidatura de emprego</h1>
+        <p id="subtitulo">Obrigado pelo seu interesse em trabalhar conosco. Por favor, confira abaixo as oportunidades de trabalho disponíveis, que atendem aos seus critérios e envie sua candidatura preenchendo o Formulário de Candidatura de Emprego.</p>
+        <br>
+    </div>
+    <form>
+        <fieldset class="grupo">
+            <div>
+                <label for="name"><strong>Nome*:</strong></label>
+                <input type="text" name="Nome" id="Nome" size="35" required>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="email"><strong>Sobrenome*:</strong></label>
+            <input type="text" name="sobrenome" id="sobrenome" size="35" required>
+        </div>
+        <label for="email"><strong>E-mail:</strong></label>
+        <input type="email" name="email" id="email" size="45" required>
+    </div>
+    <div>
+        <label for="fone"><strong>Telefone:</strong></label>
+        <input type="number" id="fone" placeholder="(xx) xxxxx-xxxx" name="fone" required size="15">
+    </div>
+    <div class="campo">
+        <label><strong>Para qual vaga você esta se candidatando:</strong></label>
+        <select id="horario">
+            <option selected disabled value="">Selecione:</option>
+            <option>Analista de Contabilidade</option>
+            <option>Analista de Suporte Técnico II</option>
+            <option>Desenvolvedor Web Júnior</option>
+        </select>
+    </div>
+        <div class="campo">
+            <label><strong>Qual a sua situação atual de emprego?</strong></label>
+            <label>
+                <input type="radio" name="setor" value="Empregado"> Empregado
+            </label>
+            <label>
+                <input type="radio" name="setor" value="Autônomo">Autônomo
+            </label>
+            <label>
+                <input type="radio" name="setor" value="Desempregado">Desempregado
+            </label>
+            <label>
+                <input type="radio" name="setor" value="Estudante">Estudante
+            </label>
+        </div>
+        <fieldset class="grupo">
+            <div>
+                <label for="name"><strong>Perfil Linkedin:</strong></label>
+                <input type="link" name="linkedin" id="linkedin" size="50" required>
+            </div>
+        <fieldset class="grupo">
+            <div id="checkss">
+                <label><strong>Em casos pontuais, você possui disponibilidade para trabalhar aos finais de semana?</strong></label><br><br>
+                <input type="checkbox" id="resposta1" name="equipamento" value="sim">
+                <label for="resposta1">Sim</label>
+                <input type="checkbox" id="resposta2" name="equipamento" value="nao">
+                <label for="resposta2">Não</label>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label><strong>Adicione um comentário:</strong></label><br>
+            <textarea placeholder="Comentário"></textarea>
+        </div>
+        <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+    </form>
+</body>
+</html>
